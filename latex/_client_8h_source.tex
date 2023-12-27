@@ -1,0 +1,71 @@
+\doxysection{Client.\+h}
+\hypertarget{_client_8h_source}{}\label{_client_8h_source}\mbox{\hyperlink{_client_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <sys/types.h>}\ \textcolor{comment}{//\ Содержит\ определения\ основных\ типов\ данных,\ таких\ как\ pid\_t\ (идентификатор\ процесса),\ size\_t\ (беззнаковое\ целое\ число\ для\ представления\ размеров\ объектов)\ и\ других.}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <iostream>}\ \textcolor{comment}{//Используется\ для\ ввода/вывода\ стандартных\ потоков\ std::cin\ и\ std::cout.\ Также\ используется\ для\ взаимодействия\ с\ консолью.}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <cstdlib>}\ \textcolor{comment}{//Содержит\ набор\ стандартных\ функций\ для\ работы\ с\ памятью,\ символами\ и\ строками}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <cstring>}\ \textcolor{comment}{//Предоставляет\ функции\ для\ работы\ с\ символьными\ строками,\ таких\ как\ strcpy,\ strncpy,\ strlen,\ strcmp,\ strcat\ и\ других.}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <unistd.h>}\ \textcolor{comment}{//\ Содержит\ системные\ вызовы\ и\ константы\ POSIX\ для\ работы\ с\ файлами,\ процессами\ и\ сокетами.\ Например,\ read,\ write,\ close,\ fork,\ exec,\ pipe\ и\ другие.}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <string>}\ \textcolor{comment}{//Предоставляет\ класс\ std::string\ для\ работы\ со\ строками.\ Включает\ функции\ для\ манипуляции\ строками,\ такие\ как\ substr,\ find,\ replace\ и\ другие.}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <locale>}\ \textcolor{comment}{//Предоставляет\ классы\ и\ функции\ для\ локализации\ и\ обработки\ различных\ культур.}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <codecvt>}\ \textcolor{comment}{//\ Содержит\ функции\ для\ конвертирования\ символов\ из\ одной\ кодировки\ в\ другую.}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <sys/socket.h>}\ \textcolor{comment}{//Содержит\ обьявления\ функций\ и\ структур\ для\ работы\ с\ сокетами,\ таких\ как\ socket,\ bind,\ listen,\ accept,\ connect\ и\ др.}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <netinet/in.h>}\ \textcolor{comment}{//\ Содержит\ определение\ структуры\ sockaddr\_in\ и\ других\ типов\ данных,\ используемых\ для\ работы\ с\ сетевыми\ адресами.}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <arpa/inet.h>}\ \textcolor{comment}{//Содержит\ функции\ для\ преобразования\ сетевых\ адресов\ из\ текстового\ формата\ в\ бинарный\ и\ обратно.}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <fstream>}\ \textcolor{comment}{//Содержит\ классы\ и\ функции\ для\ работы\ с\ файлами,\ такие\ как\ ifstream,\ ofstream,\ fstream\ для\ чтения,\ записи\ и\ манипуляции\ с\ содержимым\ файлов.}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <vector>}\ \textcolor{comment}{//Предоставляет\ класс\ std::vector,\ реализующий\ динамический\ массив,\ который\ может\ изменять\ свой\ размер\ в\ рантайме.\ Используется\ для\ хранения\ и\ манипуляции\ списком\ значений.}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <sstream>}\ \textcolor{comment}{//Предоставляет\ класс\ std::stringstream,\ который\ используется\ для\ манипуляции\ с\ символьными\ строками.\ Часто\ используется\ для\ преобразования\ чисел\ в\ строки\ и\ строк\ в\ числа.}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_client}{Client}}\{}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{comment}{//\ Функции\ для\ взаимодействия\ клиента\ и\ сервера}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_client_a5a46036fa3bd2640a134b8836024738d}{interactWithServer}}();}
+\DoxyCodeLine{00041\ \ \ \ \ std::vector<std::vector<uint32\_t>>\ \mbox{\hyperlink{class_client_a358df55c9dc08e0a90169072fa6ba4c5}{readVectorsFromFile}}();}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_client_ad42bb0731ca90d9ae6a0ef3ca61a22af}{writeVectorsToFile}}(\ \textcolor{keyword}{const}\ std::vector<uint32\_t>\&\ vectors);}
+\DoxyCodeLine{00043\ \ \ \ \ std::pair<std::string,\ std::string>\ \mbox{\hyperlink{class_client_a9d12d40010e32de931d562c6e8722d9f}{readLoginAndPasswordFromFile}}();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{//\ Гетторы\ и\ сетторы\ атрибутов\ класса\ Client}}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_client_abb302ca21e29a63e8a742b87e752f488}{getServerAddress}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_client_a2db7f0162b88edfa5368b0a1d4f2fee5}{setServerAddress}}(\textcolor{keywordtype}{int}\ address);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_client_afd9db35e1482005e9ac4370ba5a36592}{getServerPort}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_client_a9d78a0a5ec16cb8d26af3445ac3eba52}{setServerPort}}(\textcolor{keywordtype}{int}\ port);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_client_aad782c1100b02833cc1fa86ebd990483}{getInputDataFile}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_client_a14ac94a98f0c3f014621f794f889e78c}{setInputDataFile}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ filename);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_client_a598df4faf99a4bafaf127b3b99929b7b}{getOutputDataFile}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_client_a3d4aae094ba001ebc91cac71545c852c}{setOutputDataFile}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ filename);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_client_ada17e393a30cd59efba7860e73690750}{getClientCredentialsFile}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_client_a3b896d8d63b986140eb5a0e42a8bfa62}{setClientCredentialsFile}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ filename);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ m\_serverAddress;}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ m\_serverPort;}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ m\_inputDataFile;}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ m\_outputDataFile;}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ m\_clientCredentialsFile;}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00074\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_error_manager}{ErrorManager}}:\ \textcolor{keyword}{public}\ std::invalid\_argument}
+\DoxyCodeLine{00075\ \{}
+\DoxyCodeLine{00076\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_error_manager}{ErrorManager}}\ (\textcolor{keyword}{const}\ std::string\&\ what\_arg):}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ std::invalid\_argument(what\_arg)\ \{\}}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_error_manager}{ErrorManager}}\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ what\_arg):}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ std::invalid\_argument(what\_arg)\ \{\}}
+\DoxyCodeLine{00081\ \};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ }
+
+\end{DoxyCode}

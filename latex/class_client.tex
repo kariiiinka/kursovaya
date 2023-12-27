@@ -1,0 +1,121 @@
+\doxysection{Client Class Reference}
+\hypertarget{class_client}{}\label{class_client}\index{Client@{Client}}
+
+
+Класс взаимодействия с сервером  
+
+
+
+
+{\ttfamily \#include $<$Client.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_client_a5a46036fa3bd2640a134b8836024738d}{interact\+With\+Server}} ()
+\begin{DoxyCompactList}\small\item\em Главная функция для взаимодействия клиента с сервером \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ uint32\+\_\+t $>$ $>$ \mbox{\hyperlink{class_client_a358df55c9dc08e0a90169072fa6ba4c5}{read\+Vectors\+From\+File}} ()
+\begin{DoxyCompactList}\small\item\em Функция для получения векторов из файла \end{DoxyCompactList}\item 
+\Hypertarget{class_client_ad42bb0731ca90d9ae6a0ef3ca61a22af}\label{class_client_ad42bb0731ca90d9ae6a0ef3ca61a22af} 
+void {\bfseries write\+Vectors\+To\+File} (const std\+::vector$<$ uint32\+\_\+t $>$ \&vectors)
+\begin{DoxyCompactList}\small\item\em Функция для записи в файл результатов вычисления сервером \end{DoxyCompactList}\item 
+std\+::pair$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{class_client_a9d12d40010e32de931d562c6e8722d9f}{read\+Login\+And\+Password\+From\+File}} ()
+\begin{DoxyCompactList}\small\item\em Функция для получения логина и пароля из файла \end{DoxyCompactList}\item 
+\Hypertarget{class_client_abb302ca21e29a63e8a742b87e752f488}\label{class_client_abb302ca21e29a63e8a742b87e752f488} 
+int {\bfseries get\+Server\+Address} () const
+\begin{DoxyCompactList}\small\item\em Геттер для m\+\_\+server\+Address. \end{DoxyCompactList}\item 
+\Hypertarget{class_client_a2db7f0162b88edfa5368b0a1d4f2fee5}\label{class_client_a2db7f0162b88edfa5368b0a1d4f2fee5} 
+void {\bfseries set\+Server\+Address} (int address)
+\begin{DoxyCompactList}\small\item\em Сеттер для m\+\_\+server\+Address. \end{DoxyCompactList}\item 
+\Hypertarget{class_client_afd9db35e1482005e9ac4370ba5a36592}\label{class_client_afd9db35e1482005e9ac4370ba5a36592} 
+int {\bfseries get\+Server\+Port} () const
+\begin{DoxyCompactList}\small\item\em Геттер для m\+\_\+server\+Port. \end{DoxyCompactList}\item 
+\Hypertarget{class_client_a9d78a0a5ec16cb8d26af3445ac3eba52}\label{class_client_a9d78a0a5ec16cb8d26af3445ac3eba52} 
+void {\bfseries set\+Server\+Port} (int port)
+\begin{DoxyCompactList}\small\item\em Сеттер для m\+\_\+server\+Port. \end{DoxyCompactList}\item 
+\Hypertarget{class_client_aad782c1100b02833cc1fa86ebd990483}\label{class_client_aad782c1100b02833cc1fa86ebd990483} 
+string {\bfseries get\+Input\+Data\+File} () const
+\begin{DoxyCompactList}\small\item\em Геттер для m\+\_\+input\+Data\+File. \end{DoxyCompactList}\item 
+\Hypertarget{class_client_a14ac94a98f0c3f014621f794f889e78c}\label{class_client_a14ac94a98f0c3f014621f794f889e78c} 
+void {\bfseries set\+Input\+Data\+File} (const string \&filename)
+\begin{DoxyCompactList}\small\item\em Сеттер для m\+\_\+input\+Data\+File. \end{DoxyCompactList}\item 
+\Hypertarget{class_client_a598df4faf99a4bafaf127b3b99929b7b}\label{class_client_a598df4faf99a4bafaf127b3b99929b7b} 
+string {\bfseries get\+Output\+Data\+File} () const
+\begin{DoxyCompactList}\small\item\em Геттер для m\+\_\+output\+Data\+File. \end{DoxyCompactList}\item 
+\Hypertarget{class_client_a3d4aae094ba001ebc91cac71545c852c}\label{class_client_a3d4aae094ba001ebc91cac71545c852c} 
+void {\bfseries set\+Output\+Data\+File} (const string \&filename)
+\begin{DoxyCompactList}\small\item\em Сеттер для m\+\_\+output\+Data\+File. \end{DoxyCompactList}\item 
+\Hypertarget{class_client_ada17e393a30cd59efba7860e73690750}\label{class_client_ada17e393a30cd59efba7860e73690750} 
+string {\bfseries get\+Client\+Credentials\+File} () const
+\begin{DoxyCompactList}\small\item\em Геттер для m\+\_\+client\+Credentials\+File. \end{DoxyCompactList}\item 
+\Hypertarget{class_client_a3b896d8d63b986140eb5a0e42a8bfa62}\label{class_client_a3b896d8d63b986140eb5a0e42a8bfa62} 
+void {\bfseries set\+Client\+Credentials\+File} (const string \&filename)
+\begin{DoxyCompactList}\small\item\em Сеттер для m\+\_\+client\+Credentials\+File. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс взаимодействия с сервером 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m\+\_\+server\+Address} & адрес сервера \\
+\hline
+{\em m\+\_\+server\+Port} & порт сервера \\
+\hline
+{\em m\+\_\+input\+Data\+File} & имя файла с векторами \\
+\hline
+{\em m\+\_\+output\+Data\+File} & имя файла с результатами вычислений сервером \\
+\hline
+{\em m\+\_\+client\+Credentials\+File} & имя файла с логином и паролем клиента \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_client_a5a46036fa3bd2640a134b8836024738d}\label{class_client_a5a46036fa3bd2640a134b8836024738d} 
+\index{Client@{Client}!interactWithServer@{interactWithServer}}
+\index{interactWithServer@{interactWithServer}!Client@{Client}}
+\doxysubsubsection{\texorpdfstring{interactWithServer()}{interactWithServer()}}
+{\footnotesize\ttfamily int Client\+::interact\+With\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Главная функция для взаимодействия клиента с сервером 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{class_error_manager}{Error\+Manager}} & при возникновении ошибки \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_client_a9d12d40010e32de931d562c6e8722d9f}\label{class_client_a9d12d40010e32de931d562c6e8722d9f} 
+\index{Client@{Client}!readLoginAndPasswordFromFile@{readLoginAndPasswordFromFile}}
+\index{readLoginAndPasswordFromFile@{readLoginAndPasswordFromFile}!Client@{Client}}
+\doxysubsubsection{\texorpdfstring{readLoginAndPasswordFromFile()}{readLoginAndPasswordFromFile()}}
+{\footnotesize\ttfamily std\+::pair$<$ std\+::string, std\+::string $>$ Client\+::read\+Login\+And\+Password\+From\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Функция для получения логина и пароля из файла 
+
+\begin{DoxyReturn}{Returns}
+упорядоченную пару значений типа string, string соответствующих логину и паролю 
+\end{DoxyReturn}
+\Hypertarget{class_client_a358df55c9dc08e0a90169072fa6ba4c5}\label{class_client_a358df55c9dc08e0a90169072fa6ba4c5} 
+\index{Client@{Client}!readVectorsFromFile@{readVectorsFromFile}}
+\index{readVectorsFromFile@{readVectorsFromFile}!Client@{Client}}
+\doxysubsubsection{\texorpdfstring{readVectorsFromFile()}{readVectorsFromFile()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ uint32\+\_\+t $>$ $>$ Client\+::read\+Vectors\+From\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Функция для получения векторов из файла 
+
+\begin{DoxyReturn}{Returns}
+возвращает массив векторов типа vector$<$uint32\+\_\+t$>$ 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_client_8h}{Client.\+h}}\item 
+\mbox{\hyperlink{_client_8cpp}{Client.\+cpp}}\end{DoxyCompactItemize}
